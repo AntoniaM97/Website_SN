@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 40%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 300px;
+            border-radius: 10px;
+        }
+        .reply {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .signature {
+            font-size: 15px;
+            color: #a01b93;
+        }
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+            position: absolute;
+            top: 200px; /* Adjusted to 0 */
+            left: 50%;
+            transform: translate(-50%, -50%) scale(3); /* Add the scale function */
+            width: 80px; /* Define the width */
+            height: 80px; /* Define the height */
+        }
+    </style>
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    {% include "navbar.html" %}
+   <div class="container">
+        <a href={% url 'home' %}>
+        <i class="em em-cherry_blossom centered-image" aria-role="presentation" aria-label="CHERRY BLOSSOM"></i>
+        </a>
+        <h2> Welcome to Blossom !</h2>
+        <p class="reply">🖐🏻 Hey {{ user }},</p>
+        <p class="reply">We're so glad you're here! Thanks for joining us.</p>
+        <p class="reply">Learning from scratch has never been easier with Blossom. Whether your in IT for the first time or have been doing it for a while, we wanted to give you a few things that will help you get started</p>
+        <p class="reply">Have fun!</p>
+        <p class="signature">- Blossom Team</p>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Log-in{% endblock %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="Submit" value="Login">
+    </form>
+    <p> If not registered, click <a href="{% url 'signup' %}"> HERE </a> !</p>
+{#    <p> Click <a href = "{% url 'reset_password' %}"> HERE </a> to reset password.</p>#}
+
+
+
+{% endblock %}
